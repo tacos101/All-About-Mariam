@@ -2,6 +2,15 @@
 <html>
   <head>
     <link rel="stylesheet" href="webpage-style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.1.3/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.1.3/build/ol.js"></script>
+    <title>OpenLayers example</title>
   </head>
   <body>
     <h1> MARIAM DARDIR </h1>
@@ -23,17 +32,17 @@
 
   <h3>  Soccer <h3>
   <p> I <em>really</em> love soccer. It's my favorite sport. Every weekend, I watch the league games. </p>
-    <img src=https://expo.advance.net/img/2e844a649d/width960/530_mjm072718liverpoolpress09.jpeg alt="Trulli" width="250" height="180">
+    <img src=https://media.giphy.com/media/3ohjUNy8TSfbaWVZlu/giphy.gif alt="Trulli" width="250" height="180">
 
   <h3> Taekwondo </h3>
   <p> I have been learning Taekwondo for 4 years. The sense of empowerment it provides is AMAZING! </p>
-    <img src=https://png.pngtree.com/element_origin_min_pic/16/07/09/205780eb4c306c2.jpg alt="Trulli" width="250" height="180">
+    <img src=https://i.gifer.com/PLwN.gif alt="Trulli" width="250" height="180">
   <h3> Reading </h4>
   <p> Most of my free time is spent at a library, where I read almost any book I can </p>
-      <img src=https://res.cloudinary.com/simpleview/image/fetch/f_auto,q_75/https://res.cloudinary.com/simpleview/image/upload/crm/parkcity/books_4859503D-C558-40BD-BF8E0023F8F2E057_e34e4e7e-ce74-4db0-b76c2d6bffa12303.jpg alt="Trulli" width="250" height="180">
+      <img src=https://data.whicdn.com/images/192428038/original.gif alt="Trulli" width="250" height="180">
   <h3> Science </h3>
   <p> Science is literally the coolest thing. The idea of learning about the world and innovating is my biggest interest </p>
-    <img src=https://www.tottington.bury.sch.uk/wp-content/uploads/triple-science.jpg alt="Trulli" width="250" height="180">
+    <img src=https://media.giphy.com/media/UgQ3BSsv5Xuc8/giphy.gif alt="Trulli" width="250" height="180">
 </div>
 
 <h2> MUSIC </h2>
@@ -41,13 +50,13 @@
 <div id="myDIV3">
   <p> <br> Imagine dragons </br>
     <p> The band, the music, the life...I cannot even explain it. </p>
-    <img src=https://virginradio.ro/wp-content/uploads/2017/04/imagine-dragons-radioactive.jpg alt="Trulli" width="250" height="180">
+    <img src=https://mir-s3-cdn-cf.behance.net/project_modules/disp/213aff25578157.5634785b4417f.gif alt="Trulli" width="250" height="180">
     <p> <br> Shawn Mendes </br>
     <p> So relatable and calming.. <3 </p>
-    <img src=https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Illuminate_%28Official_Album_Cover%29_by_Shawn_Mendes.png/220px-Illuminate_%28Official_Album_Cover%29_by_Shawn_Mendes.png alt="Trulli" width="250" height="180">
+    <img src=https://static.tumblr.com/e43550341a2015e622a99cf5a4d7e346/wzgeiei/eTZofmgrt/tumblr_static_tumblr_static_7ic2itm2slk4w8kgg8kgsksc8_640.gif alt="Trulli" width="250" height="180">
     <p> <br> Adele </br>
     <p> Adele's voice is so powerful it gets kinda scary. There is so much depth to her songs. </p>
-    <img src=https://i.pinimg.com/originals/a9/95/9c/a9959c17c8260650136fdc4a7d8bb218.jpg alt="Trulli" width="250" height="180">
+    <img src=https://media.giphy.com/media/LzwvSaPX6F7yM/giphy.gif alt="Trulli" width="250" height="180">
 
   </P>
 </div>
@@ -58,15 +67,43 @@
 <div id="myDIV4">
   <p> <br> Friends </br>
   <p> "JOEY DOESN'T SHARE FOOD!" </p>
-    <img src=https://www.mercurynews.com/wp-content/uploads/2018/01/friends_21.jpg?w=419 alt="Trulli" width="250" height="180">
+    <img src=https://media.giphy.com/media/lfmYxOkGpNtEk/giphy.gif alt="Trulli" width="250" height="180">
   <p> <br> Full House </br>
       <p> "NOT THE HAIR! WATCH THE HAIR!" </p>
-    <img src=https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fewedit.files.wordpress.com%2F2017%2F05%2Ft4dfuho_ec018_h.jpg%3Fcrop%3D26px%252C23px%252C1774px%252C1181px%26resize%3D2000%252C9999&w=700&q=85 alt="Trulli" width="250" height="180">
+    <img src=https://media.giphy.com/media/3tRVOjTffiWOY/giphy.gif alt="Trulli" width="250" height="180">
   <p> <br> The Fresh Prince </br>
     <p> <br> Uncle Phil: "Geoffrey, get my tools." </br>
         <br> Geoffrey: "You mean your knife and fork?" </br> </p>
-    <img src=https://s.abcnews.com/images/Entertainment/GTY_cast_fresh_prince_nt_141202_16x9_608.jpg alt="Trulli" width="250" height="180">
+    <img src=http://cdn.viralitytoday.com/posts/4UNBA/CfB1EQw2.gif alt="Trulli" width="250" height="180">
   </p>
+  <h2>My Map</h2>
+  <div id="map" class="map"></div>
+  <script type="text/javascript">
+    var map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([37.41, 8.82]),
+        zoom:
+      })
+    });
+  </script>
+
+  <div1>
+    <button onclick="map.getView().setCenter(ol.proj.fromLonLat([30.8428, 29.3084]))"> Where I'm From <button>
+    <button onclick="map.getView().setCenter(ol.proj.fromLonLat([285.9224,40.7282]))"> Where I live <button>
+    <button onclick="map.getView().setCenter(ol.proj.fromLonLat([28.9784, 41.0082]))"> Favorite Vacation Spot <button>
+  </div1>
+
+  <p>
+    <br> THE STRUGGLE IS TOO REAL...Travel who??? </br>
+    <br> I'm the map I'm the map I'm the map I'm the map I'm the map I'm the map I'M THE MAAAAAAAP! <br>
+  </p>
+
 
 
 </div>
